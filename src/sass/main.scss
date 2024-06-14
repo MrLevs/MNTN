@@ -84,9 +84,13 @@
         max-width: 1000px;
         margin: 0px auto;
         padding: 50px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px 0;
         position: relative;
         top: 150px;
-        z-index: 2;
+        z-index: 30;
     }
     &__label {
         text-transform: uppercase;
@@ -94,7 +98,6 @@
         display: flex;
         font-size: 1.15rem;
         letter-spacing: 6px;
-        margin: 0 0 30px 0;
         align-items: center;
         &::before {
             content: "";
@@ -106,6 +109,19 @@
     }
     &__title {
         font-size: 3rem;
+    }
+    &__scroll {
+        padding: 0 30px 0 0;
+        position: relative;
+        &::after {
+            content: "";
+            width: 16px;
+            height: 24px;
+            background: url(../img/arrow.svg);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     }
     &__images {
         width: 120%;
@@ -158,6 +174,8 @@
 }
 //--------------Content-------------------------------
 .content {
+    width: 100%;
+    min-height: 2575px;
     background-color: #0b1d26;
     position: relative;
     z-index: 5;
@@ -171,6 +189,124 @@
         height: 300px;
         transform: translate(0px, -100%);
         background: linear-gradient(180deg, rgba(11, 29, 38, 0 ) 0%, rgba(11, 29, 38, 1 ) 72%);
+    }
+    &__container {
+        max-width: 1460px;
+        width: 100%;
+        position: absolute;
+        top: -100px;
+        display: flex;
+        flex-direction: column;
+        gap: 200px 0;
+    }
+    &__item {
+        display: flex;
+        gap: 0 100px;
+    }
+    &__box {
+        width: 100%;
+        position: relative;
+    }
+    &__number {
+        font-size: 15rem;
+        color: rgba(255, 255, 255, 0.1);
+    }
+    &__info {
+        max-width: 640px;
+        position: absolute;
+        top: 18%;
+        right: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 27px 0;
+    }
+    &__label {
+        text-transform: uppercase;
+        color: #fbd784;
+        display: flex;
+        font-size: 1.15rem;
+        letter-spacing: 6px;
+        align-items: center;
+        &::before {
+            content: "";
+            width:  70px;
+            height: 2px;
+            margin: 0 30px 0 0;
+            background-color: #fbd784;
+        }
+    }
+    &__title {
+        font-size: 2rem;
+    }
+    &__text {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    &__link {
+        padding: 0 30px 0 0;
+        position: relative;
+        color: #fbd784;
+        &::after {
+            content: "";
+            width: 24px;
+            height: 16px;
+            background: url(../img/arrow_r.svg);
+            position: absolute;
+            top: 15%;
+            right: 0;
+        }
+    }
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+//------------------Footer--------------------
+.footer {
+    width: 100%;
+    padding: 100px 0 40px 0;
+    background-color: #0b1d26;
+    position: relative;
+    z-index: 5;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px 0;
+    }
+
+    &__text {
+        font-size: 1rem;
+    }
+
+    &__copyright {
+        margin: 135px 0 0 0;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__title {
+        color: #fbd784;
+        font-size: 1.5rem;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px 0;
+    }
+
+    &__link {
+        font-size: 1rem;
     }
 }
 //---------------------Media------------------
