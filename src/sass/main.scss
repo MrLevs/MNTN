@@ -265,7 +265,7 @@
             z-index: 1;
             top: 15%;
             right: 0;
-            animation: arrowRight 2s linear infinite;
+            animation: arrowRight 1s linear infinite alternate;
         }
     }
 }
@@ -364,21 +364,12 @@
 }
 @keyframes arrowRight {
     0% {
-        opacity: 0;
         transform: translate(0, 0);
     }
-    10% {
-        opacity: 0;
-    }
     50% {
-        opacity: 1;
         transform: translate(17px, 0);
     }
-    90% {
-        opacity: 0;
-    }
     100% {
-        opacity: 0;
         transform: translate(35px, 0);
     }
 }
